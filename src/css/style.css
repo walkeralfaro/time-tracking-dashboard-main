@@ -1,0 +1,101 @@
+:root {
+  --Blue: hsl(246, 80%, 60%);
+
+  /* Work */
+  --LightOrange: hsl(15, 100%, 70%);
+  /* Play */
+  --SoftBlue: hsl(195, 74%, 62%);
+  /* Study */
+  --LightRed: hsl(348, 100%, 68%);
+  /* Exercise */
+  --LimeGreen: hsl(145, 58%, 55%);
+  /* Social */
+  --Violet: hsl(264, 64%, 52%);
+  /* Self Care */
+  --SoftOrange: hsl(43, 84%, 65%);
+  
+  /* NEUTRAL */
+
+  --VeryDarkBlue: hsl(226, 43%, 10%);
+  --DarkBlue: hsl(235, 46%, 20%);
+  --DesaturatedBlue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Permite que un REM sea equivalente a 10px */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--VeryDarkBlue);
+  color: white;
+  position: relative;
+}
+
+.container {
+  max-width: 144rem;
+  margin:0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 4rem;
+
+}
+
+.grid__activities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.Work {
+  background-color: var(--LightOrange);
+}
+
+.Play {
+  background-color: var(--SoftBlue);
+}
+.Study {
+  background-color: var(--LightRed);
+}
+.Exercise {
+  background-color: var(--LimeGreen);
+}
+.Social {
+  background-color: var(--Violet);
+}
+.Self {
+  background-color: var(--SoftOrange);
+}
+
+
+
+
+
+
+
+
+
+
+/* ATTRIBUTION */
+.attribution {
+    position: absolute;
+    top: 98%;
+    width: 100%;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--DesaturatedBlue);
+    text-decoration: none;
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="main__card">
 
       <div class="cardExt">
         <div class="fle">
