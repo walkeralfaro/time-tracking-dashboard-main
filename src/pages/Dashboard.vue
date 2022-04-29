@@ -4,32 +4,29 @@
     <div class="grid">
       <Main @periodSelected="(period) => periodSelect = period.toLowerCase()"/>
 
-      <div v-if="periodSelect==='daily'" class="grid__activities">
-        <Activity
+      <div class="grid__activities">
+        <activity
           v-for="activity in activities" :key="activity"
           :title="activity.title"
-          :current="activity.timeframes.daily.current"
-          :previous="activity.timeframes.daily.previous"
-        />
+        > 
+            <div v-if="periodSelect ==='daily'" class="time">
+              <p class="hoursCurrent">{{ activity.timeframes.daily.current }}hrs</p>
+              <p class="hoursPrevious">Last Day - {{ activity.timeframes.daily.previous }}hrs </p>
+            </div>
+
+            <div v-else-if="periodSelect ==='weekly'" class="time">
+              <p class="hoursCurrent">{{ activity.timeframes.weekly.current }}hrs</p>
+              <p class="hoursPrevious">Last Week - {{ activity.timeframes.weekly.previous }}hrs </p>
+            </div>
+
+            <div v-else-if="periodSelect ==='monthly'" class="time">
+              <p class="hoursCurrent">{{ activity.timeframes.monthly.current }}hrs</p>
+              <p class="hoursPrevious">Last Month - {{ activity.timeframes.monthly.previous }}hrs </p>
+            </div>
+
+        </activity>
       </div>
 
-      <div v-if="periodSelect==='weekly'" class="grid__activities">
-        <Activity
-          v-for="activity in activities" :key="activity"
-          :title="activity.title"
-          :current="activity.timeframes.weekly.current"
-          :previous="activity.timeframes.weekly.previous"
-        />
-      </div>
-
-      <div v-if="periodSelect==='monthly'" class="grid__activities">
-        <Activity
-          v-for="activity in activities" :key="activity"
-          :title="activity.title"
-          :current="activity.timeframes.monthly.current"
-          :previous="activity.timeframes.monthly.previous"
-        />
-      </div>
     </div>
   </div>
 <!-- </div> -->
@@ -42,6 +39,7 @@ import Activity from '@/components/Activity'
 import activitiesData from '@/assets/data/data'
 
 export default {
+  name: 'Padre',
   components: { Activity, Main },
   data() {
     return {
@@ -62,9 +60,24 @@ export default {
 	height:100vh;
 }
 
+.time {
 
+}
 
+.hoursCurrent {
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
 
-
+.hoursPrevious {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: var(--PaleBlue);
+}
 
 </style>

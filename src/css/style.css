@@ -20,6 +20,7 @@
   --DarkBlue: hsl(235, 46%, 20%);
   --DesaturatedBlue: hsl(235, 45%, 61%);
   --PaleBlue: hsl(236, 100%, 87%);
+  --Aux: #34397B;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -46,22 +47,24 @@ body {
 }
 
 .grid {
+  margin: 0 5rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 4rem;
+  width: 100%;
+  gap: 3rem;
 
 }
 
 .grid__activities {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 3rem;
 }
 
+/* BACKGROUND COLORS FOR CARDS */
 .Work {
   background-color: var(--LightOrange);
 }
-
 .Play {
   background-color: var(--SoftBlue);
 }
