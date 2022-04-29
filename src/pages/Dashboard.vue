@@ -60,9 +60,6 @@ export default {
 	height:100vh;
 }
 
-.time {
-
-}
 
 .hoursCurrent {
   font-size: 6rem;
@@ -73,7 +70,7 @@ export default {
 }
 
 .hoursPrevious {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0;
   padding: 0;
   font-weight: 400;

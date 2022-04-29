@@ -47,7 +47,7 @@ body {
 }
 
 .grid {
-  margin: 0 5rem;
+  margin: 0 7rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
   width: 100%;
@@ -80,7 +80,6 @@ body {
 .Self {
   background-color: var(--SoftOrange);
 }
-
 
 
 
