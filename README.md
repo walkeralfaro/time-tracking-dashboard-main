@@ -24,7 +24,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![landscape](https://github.com/WalkerAlfaro/time-tracking-dashboard-main/blob/main/screenshots/landscape.png)
+
+![mobile](https://github.com/WalkerAlfaro/time-tracking-dashboard-main/blob/main/screenshots/mobile.png)
 
 ### Links
 
