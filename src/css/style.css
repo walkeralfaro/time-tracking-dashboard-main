@@ -13,14 +13,14 @@
   --Violet: hsl(264, 64%, 52%);
   /* Self Care */
   --SoftOrange: hsl(43, 84%, 65%);
-  
+
   /* NEUTRAL */
 
   --VeryDarkBlue: hsl(226, 43%, 10%);
   --DarkBlue: hsl(235, 46%, 20%);
   --DesaturatedBlue: hsl(235, 45%, 61%);
   --PaleBlue: hsl(236, 100%, 87%);
-  --Aux: #34397B;
+  --Aux: #34397b;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: var(--VeryDarkBlue);
   color: white;
   position: relative;
@@ -43,7 +43,7 @@ body {
 
 .container {
   max-width: 144rem;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .grid {
@@ -52,7 +52,6 @@ body {
   grid-template-columns: 1fr 3fr;
   width: 100%;
   gap: 3rem;
-
 }
 
 .grid__activities {
@@ -81,23 +80,30 @@ body {
   background-color: var(--SoftOrange);
 }
 
+@media (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5rem 2rem 10rem 2rem;
+    width: 37.5rem;
+  }
 
-
-
-
-
-
-
+  .grid__activities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
 
 /* ATTRIBUTION */
 .attribution {
-    position: absolute;
-    top: 98%;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  top: 98%;
+  width: 100%;
+  text-align: center;
 }
 
 .attribution a {
-    color: var(--DesaturatedBlue);
-    text-decoration: none;
+  color: var(--DesaturatedBlue);
+  text-decoration: none;
 }

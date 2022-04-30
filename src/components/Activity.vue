@@ -113,4 +113,14 @@ export default {
   font-weight: 400;
   font-size: 2rem;
 }
+
+@media (max-width: 1024px) {
+  .card {
+    height: 15rem;
+  }
+
+  .cardExt {
+    height: 20rem;
+  }
+}
 </style>
