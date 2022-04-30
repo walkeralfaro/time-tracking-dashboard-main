@@ -1,19 +1,52 @@
-# vue_time_tracking
+# Frontend Mentor - Time tracking dashboard solution
 
-## Project setup
-```
-npm install
-```
+This is a solution provided for **Walker Alfaro Trelles** to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Table of contents
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Select the time you want to view between daily, weekly and monthly
+- The application must be able to adapt responsively
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- [Solution URL](https://github.com/WalkerAlfaro/time-tracking-dashboard-main)
+- [Live site URL](https://walker-alfaro-time-tracking-challenge.netlify.app)
+
+## My process
+
+### Built with
+
+-  HTML5
+- CSS - BEM
+- [VUE CLI 3](https://vuejs.org) - Framework
+
+### What I learned
+
+Implement applications with VUE 3. Applying everything previously learned from CSS and HTML to the structure and styles of the page. 
+
+Communicate information between parent and child components.
+
+## Author
+
+- Website - [My Github](https://github.com/WalkerAlfaro)
+- Frontend Mentor - [@walkeralfaro](https://www.frontendmentor.io/profile/WalkerAlfaro)
+
