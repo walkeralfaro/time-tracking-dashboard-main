@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <article class="card">
     <div class="cardExt" :class="title">
       <div class="cardImg">
         <img :src="imgSrc" alt="activity" />
@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

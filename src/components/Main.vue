@@ -11,12 +11,21 @@
         </div>
       </div>
       <div class="cardInt">
-        <select v-model="periodSelected" multiple class="period__options">
-          <option>Daily</option>
-          <option>Weekly</option>
-          <option>Monthly</option>
-        </select>
-        <div class="aux"></div>
+        <button
+         @click="$emit('periodSelected', 'daily')" 
+         :class="periodSelect === 'daily' ? 'press' : null">
+        Daily
+        </button>
+        <button
+         @click="$emit('periodSelected', 'weekly')" 
+         :class="periodSelect === 'weekly' ? 'press' : null">
+         Weekly
+        </button>
+        <button
+         @click="$emit('periodSelected', 'monthly')" 
+         :class="periodSelect === 'monthly' ? 'press' : null">
+         Monthly
+        </button>
       </div>
     </div>
   </div>
@@ -24,26 +33,20 @@
 
 <script>
 export default {
-  data() {
-    return {
-      periodSelected: ["Daily"],
-    };
-  },
-
-  emits: ["periodSelected"],
-
-  created() {
-    this.$emit("periodSelected", this.periodSelected[0]);
-  },
-
-  beforeUpdate() {
-    this.$emit("periodSelected", this.periodSelected[0]);
-  },
+name: "Principal",
+props: ["periodSelect"],
 };
 </script>
 
 <style scoped>
 .main__card {
+  width: 100%;
+  height: 100%;
+}
+
+.cardExt {
+  background-color: var(--DarkBlue);
+  border-radius: 1.5rem;
   width: 100%;
   height: 100%;
 }
@@ -55,6 +58,12 @@ export default {
   background-color: var(--Blue);
   border-radius: 1.5rem;
   height: 70%;
+}
+
+.card__image img {
+  width: 9rem;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
 .main__name {
@@ -70,74 +79,27 @@ export default {
   font-size: 1.6rem;
 }
 
-.cardExt {
-  background-color: var(--DarkBlue);
-  border-radius: 1.5rem;
-  width: 100%;
-  height: 100%;
-}
-
 .cardInt {
   height: 30%;
   display: flex;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
 }
 
-.period__options {
+.cardInt button {
+  border: none;
+  background: none;
+  color: var(--PaleBlue);
   font-size: 1.8rem;
-  font-weight: 400;
-  height: 72%;
-  padding: 0 4rem 0 4rem;
-}
-
-.period__options option {
-  padding-bottom: 1.5rem;
-}
-
-.card__image img {
-  width: 9rem;
-  border: 3px solid white;
-  border-radius: 50%;
-}
-
-select[multiple]:focus option:checked {
-  background: linear-gradient(
-    0deg,
-    hsl(235, 46%, 20%) 100%,
-    hsl(235, 46%, 20%) 100%
-  );
-}
-
-select[multiple] option:checked {
-  -webkit-text-fill-color: white;
-  color: white;
-}
-
-select[multiple] option {
-  background: linear-gradient(
-    0deg,
-    hsl(235, 46%, 20%) 100%,
-    hsl(235, 46%, 20%) 100%
-  );
-  -webkit-text-fill-color: var(--PaleBlue);
-  -moz-text-fill-color: var(--PaleBlue);
+  margin: 1rem;
+  margin-left: 3rem;
   cursor: pointer;
 }
 
-select.period__options {
-  background: none;
-  border: none;
-  outline: none;
-}
-
-div.aux {
-  position: absolute;
-  left: 15rem;
-  height: 15rem;
-  width: 5rem;
-  background: var(--DarkBlue);
-  z-index: 10;
+.cardInt button.press {
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -167,13 +129,14 @@ div.aux {
   }
 
   .cardInt {
-    height: 17rem;
+    flex-direction: row;
+    align-items: center;
+    height: 5rem;
   }
 
-  select.period__options {
-    background: none;
-    border: none;
-    outline: none;
-  }
+  .cardInt button {
+    margin: 2rem;
+}
+
 }
 </style>

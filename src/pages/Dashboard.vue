@@ -3,7 +3,8 @@
   <div class="flex">
     <div class="grid">
       <Main
-        @periodSelected="(period) => (periodSelect = period.toLowerCase())"
+        @periodSelected="(period) => (periodSelect = period)"
+        :periodSelect = "periodSelect"
       />
 
       <div class="grid__activities">
@@ -17,7 +18,7 @@
               {{ activity.timeframes.daily.current }}hrs
             </p>
             <p class="hoursPrevious">
-              Last Day - {{ activity.timeframes.daily.previous }}hrs
+              Yesterday - {{ activity.timeframes.daily.previous }}hrs
             </p>
           </div>
 
@@ -55,7 +56,7 @@ export default {
   components: { Activity, Main },
   data() {
     return {
-      periodSelect: "",
+      periodSelect: "weekly",
       activities: activitiesData,
     };
   },
